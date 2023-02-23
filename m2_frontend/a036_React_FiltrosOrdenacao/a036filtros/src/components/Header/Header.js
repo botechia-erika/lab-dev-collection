@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, InputNumber , InputName} from "./styles";
 import { useState } from "react";
-const Header = ({ setSearchId }, { searchId }) => {
+const Header = ({ setSearchId }, { searchId }, {searchName}, {setSearchName}) => {
   const pokemontypesArray = [
     "Normal",
     "Fire",
@@ -36,7 +36,14 @@ const Header = ({ setSearchId }, { searchId }) => {
         max="99"
       />
       <InputName 
-      type="text" placeholder="Nome Pokemon" />
+      type="text" 
+      placeholder="Nome Pokemon" 
+      value={searchName}
+        onChange={(e) => {
+          setSearchName(e.target.value);
+        }}
+      
+      />
       <select>
         <option value="">Ordenar</option>
         <option value="">Crescente</option>

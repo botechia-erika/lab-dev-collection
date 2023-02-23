@@ -33,36 +33,60 @@ width: 80vw;
 `;
 function App() {
   const [searchId, setSearchId] = useState("");
+  const [searchName, setSearchName] = useState("")
+  console.log(searchName);
+  console.log(searchId);
+
 
   console.log(searchId);
   return (
     <>
       <GlobalStyle />
-      <Header searchId={searchId} setSearchId={setSearchId} />
+      <Header 
+      searchId={searchId} 
+      setSearchId={setSearchId}
+      searchName={searchName}
+      setSearchName={setSearchName}
+      />
+    
       <CardsContainer>
         {pokemons
           .filter((pokemon) => {
             console.log(pokemon);
-
-          if( searchId && (pokemon.id ===  searchId ))
+           // if (searchId && pokemon.id.includes(searchId))
+          
+          if(searchId && pokemon.id === searchId)
           {
               return pokemon;
           }
-          else if( !searchId )
+          else if( !searchId)
           {
             return pokemons;
           }
-          })
-          .map((pokemon) => {
+     })
+     
+      .filter((pokemon=>{
+        console.log(pokemon);
+        if(searchName && 
+          pokemon.name.english.toLowerCase().includes(searchName.toLowerCase()))
+          {
+            return pokemon;
+          }
+          else if(!searchName){
+            return pokemons;
+          }
+      })
+
+      .map((pokemon) => {
             return (
               <PokemonCard
                 cardColor={getColors(pokemon.type[0])}
                 key={pokemon.id}
                 pokemon={pokemon}
               />
-            );
-          })}
-      </CardsContainer>
+            )
+      })
+  )})      </CardsContainer>
     </>
   );
 }
