@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, InputNumber } from "./styles";
+import { Container, InputNumber , InputName} from "./styles";
 import { useState } from "react";
 const Header = ({ setSearchId }, { searchId }) => {
   const pokemontypesArray = [
@@ -35,7 +35,8 @@ const Header = ({ setSearchId }, { searchId }) => {
         min="0"
         max="99"
       />
-      <input type="text" placeholder="Buscar por Nome" />
+      <InputName 
+      type="text" placeholder="Nome Pokemon" />
       <select>
         <option value="">Ordenar</option>
         <option value="">Crescente</option>
@@ -44,6 +45,7 @@ const Header = ({ setSearchId }, { searchId }) => {
       <select name="tipo" id="tipo">
         <option value="">Selecione um tipo</option>
         {pokemontypesArray.map((type) => {
+          
           return (
             <option key={type} value={type}>
               {type}

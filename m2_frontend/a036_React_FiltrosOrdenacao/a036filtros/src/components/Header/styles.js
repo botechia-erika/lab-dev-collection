@@ -34,7 +34,7 @@ export const InputNumber = styled.input`
 
  export const InputName = styled.input`
  width: 100%;
- max-width: 100px;
+ max-width: 110px;
  height: 40px;
  border-radius: 15px;
  `

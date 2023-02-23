@@ -30,10 +30,9 @@ width: 80vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
   justify-items: center;
-  
 `;
 function App() {
-  const [searchId, setSearchId] = useState("0");
+  const [searchId, setSearchId] = useState("");
 
   console.log(searchId);
   return (
@@ -44,7 +43,15 @@ function App() {
         {pokemons
           .filter((pokemon) => {
             console.log(pokemon);
-            if (searchId && pokemon.id.includes(searchId)) return pokemon;
+
+          if( searchId && (pokemon.id ===  searchId ))
+          {
+              return pokemon;
+          }
+          else if( !searchId )
+          {
+            return pokemons;
+          }
           })
           .map((pokemon) => {
             return (
