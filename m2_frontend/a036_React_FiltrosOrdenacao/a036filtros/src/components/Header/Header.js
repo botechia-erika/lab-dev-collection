@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Number } from "./styles";
+import { Container, InputNumber } from "./styles";
 import { useState } from "react";
 const Header = ({ setSearchId }, { searchId }) => {
   const pokemontypesArray = [
@@ -25,9 +25,9 @@ const Header = ({ setSearchId }, { searchId }) => {
 
   return (
     <Container>
-      <Number
+      <InputNumber
         type="number"
-        placeholder="Buscar por id"
+        placeholder="id"
         value={searchId}
         onChange={(e) => {
           setSearchId(e.target.value);

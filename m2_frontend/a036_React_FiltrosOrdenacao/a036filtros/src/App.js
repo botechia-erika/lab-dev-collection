@@ -34,6 +34,7 @@ width: 80vw;
 `;
 function App() {
   const [searchId, setSearchId] = useState("0");
+
   console.log(searchId);
   return (
     <>

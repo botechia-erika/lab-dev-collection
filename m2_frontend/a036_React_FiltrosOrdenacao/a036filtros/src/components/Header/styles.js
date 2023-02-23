@@ -24,10 +24,17 @@ export const Container = styled.header`
   }
 `;
 
-export const Number = styled.input`
+export const InputNumber = styled.input`
  max-width: 50px;
  font-size: 1rem;
   height: 40px;
   text-align: center;
   border-radius: 15px;
+ `
+
+ export const InputName = styled.input`
+ width: 100%;
+ max-width: 100px;
+ height: 40px;
+ border-radius: 15px;
  `
