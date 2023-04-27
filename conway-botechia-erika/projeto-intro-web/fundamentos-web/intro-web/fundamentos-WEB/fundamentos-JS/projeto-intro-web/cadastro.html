@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="../../fundJS-1/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>repo FUNDAMENTOS JS #01</title>
+
+  <style>
+    .pre-footer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      gap: 115px;
+
+
+      height: 368px;
+
+
+      background: #EAF2FD;
+
+
+      flex: none;
+      order: 0;
+      align-self: stretch;
+      flex-grow: 0;
+
+    }
+  </style>
+</head>
+<script src="./e03.js" defer></script>
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <nav class="menu" id="idMenu">
+    <label for="#">BRA-DEV<img src="../img/logo.png" alt="logo libretaPET" class="logoBrand"></label>
+    <ul class="menu__item ">
+      <li class="item"><a href="../bra-dev/index.html" class="link-item">Home</a></li>
+      <li class="item"><a href="../bra-dev/cursos.html" class="link-item">Cursos</a></li>
+      <li class="item"><a href="../copa-dev/torneio.html" class="link-item">COPA DEV</a></li>
+      <li class="item"><a href="../bra-dev/contato.html" class="link-item">Contacto</a></li>
+      <li class="item"><a href="../bra-dev/matricula.html" class="link-item">Matriculas</a>
+      </li>
+      <li class="item"><a href="../login/log-1.html" class="link-item">Login</a></li>
+    </ul>
+
+    <buton class="btn__menu" id="buttonMenu">
+      <i class="fa fa-bars"></i>
+    </buton>
+  </nav>
+  <header class="display-0">
+    <div class="pre-footer">
+      <h1>Controle de Funcionarios</h1>
+
+      <h2>STAFF, COLABORADOR, MANAGER</h2>
+    </div>
+  </header>
+  <main class="display-0">
+    <div class="container">
+
+      <form action="" method="GET">
+        <fieldset class="containerFieldset">
+          <legend>Informacao Pessoal</legend>
+          <p>
+            <label for="userInput">Nombre Completo: </label>
+            <input type=" text" for="userInput" id="userInput" placeholder="Antonio da Silva Sauro">
+            <!-- FOR = ES PARA -- label es para este input -->
+          </p>
+          <!-- fecha -->
+          <p>
+            <label class="birthdayInput">Fecha Cumple </label>
+            <input type="date" name="birthdayInput" id="birthdayInput">
+
+          </p>
+          <!-- EMAIL -->
+
+          <p>
+            <label for="emailUserInput">E-mail</label>
+            <input type="email" name="emailUserInput" id="emailUserInput" minlength="9" maxlength="250"
+              pattern=".+@.+\.com">
+          </p>
+
+
+
+          <!-- PASSWORD -->
+          <p>
+            <label for="passwordUser">Contrasena</label>
+            <input type="password" name="passwordUser"
+              pattern="[(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$]" id="passwordUser"
+              minlength="5" maxlength="8" size="8" required="">
+          </p>
+        </fieldset>
+        <!--SELECT ESCOLARIDADE-->
+        <fieldset class="containerFieldset">
+          <legend>Informacao Escolar-Laboral</legend>
+          <label for="escolaridadeUsuario">Informe sua escolaridade (Ate qual opcao estudou):</label>
+
+          <select name="escolaridadeUsuario" id="escolaridadeUsuario">
+            <option value="">--Selecione ESCOLARIDADE correspondente--</option>
+            <option value="naoEstudou">Nao Alcancei Nenhuma Escolaridade</option>
+            <option value="fundamental1">Fundamental 1 (1 - 4 serie Antigos - atual 1 - 5 ano)</option>
+            <option value="fundamental2">Fundamental 2 (5 - 8 serie Antigos - atual 6 - 9 ano)</option>
+            <option value="ensinoMedioParcial">Ensino Medio Incompleto</option>
+            <option value="cursoTecnicoIncompleto">Curso Tecnico Incompleto - abandonado</option>
+            <option value="cursoTecnicoProgresso">Curso Tecnico (EM PROGRESSO)</option>
+            <option value="cursoTecnico">Curso Tecnico Completo</option>
+            <option value="superiorIncompleto">Superior Incompleto - abandonado</option>
+            <option value="superiorProgresso">Superior Tecnico (EM PROGRESSO)</option>
+            <option value="superior">Superior Completo</option>
+            <option value="praticaEspecialDocumentada">Habilidade em Area Especifica Documentada(GITHUB, EXPERIENCIA,
+              PROJETOS
+              LABORAL )</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Info Asociada a Familia e Trabalho</legend>
+          <label for="filhosUsuario"> Ingrese 0 para NAO TENHO FILHOS ou NUMERO DE FILHOS que voce tem:</label>
+          <input type="number" name="filhosUsuario" id="filhosUsuario" min="0" max="50" maxlength="2" value="0">
+          </p>
+          <p>
+            <label for="auxilioCreche"> Em caso de RECEBER AUXILIO CRECHE indique VALOR do AUXILIO por cada 1 FILHO em
+              REAIS
+              (CENTAVOS SEPARADOS POR PONTO .)<br>
+              <strong>Valor Auxilo por Cada Filho R$</strong>
+            </label>
+            <input type="text" name="auxilioCreche" id="auxilioCreche  value=" 0">
+          </p>
+          <p>
+            <label for="cargoUsuario">Qual e seu cargo?: </label>
+            <input type="text" for="cargoUsuario" id="cargoUsuario" placeholder="Cozinheiro">
+            <!-- FOR = ES PARA -- label es para este input -->
+          </p>
+          <div>
+            <input type="radio" id="isComissao" name="isComissao" value="true" checked>
+            <label for="isCNH">SIM</label>
+            <input type="radio" id="isComissao" name="isComissao" value="false" checked>
+            <label for="isCNH">NAO</label>
+          </div>
+        </fieldset>
+        <!--radio-->
+        <fieldset>
+
+          <!-- size = tamano visual minlenght=numero minimo de caracteres maxlenght = numero maximo caracteres -->
+          <!-- pattern usa expresiones regulares tipo de conjunto de caracteres que acepta -->
+
+          <!-- file -->
+          <!--              <p><label>Archivo
+      <input type="file" name="fileUser" id="fileUser">
+      </label>
+   -->
+          <p>
+            <br>
+          <p>
+            <label>DATA APROXIMADA DE ADMISSAO</label>
+            <input type="datetime" name="dataAdmissao" id="dataAdmissao">
+
+            </label>
+          </p>
+          <br>
+        </fieldset>
+        <fieldset class="col-sm-10 col-md-6 col-lg-4">
+          <legend>Valores SALARIOS ULTIMOS 6 MESES</legend>
+          <table>
+            <thead>
+              <tr>
+                <td>MES e DIA PAGO</td>
+                <td>% EQUIVALENTE A COMISSAO</td>
+                <td>Sobre que se aplica a comissao</td>
+                <td>VALOR COMISSAO</td>
+                <td>VALOR SALARIO BASE (SEM COMISSAO)</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="date" name="mesDiaPg1" id="mesDiaPg1"></td>
+                <td><input type="number" name="perCentComissao1" id="perCentComissao1"></td>
+                <td><input type="text" name="applyComissao1" id="applyComissao1" placeholder="Ex: TOTAL DE VENDAS"></td>
+                <td><input type="number" name="valorComissao1" id="valorComissao1"></td>
+                <td><input type="number" name="valorSalarioBASE1" id="valorSalarioBase1"></td>
+              </tr>
+
+              <tr>
+                <td><input type="date" name="mesDiaPg2" id="mesDiaPg2"></td>
+                <td><input type="number" name="perCentComissao2" id=" perCentComissao2"></td>
+                <td><input type="text" name="applyComissao2" id="applyComissao2" placeholder="Ex: TOTAL DE VENDAS"></td>
+                <td><input type="number" name="valorComissao2" id="valorComissao2"></td>
+                <td><input type="number" name="valorSalarioBASE2" id="valorSalarioBase2"></td>
+              </tr>
+              <tr>
+                <td><input type="date" name="mesDiaPg3" id="mesDiaPg3"></td>
+                <td><input type="number" name="perCentComissao3" id="perCentComissao1"></td>
+                <td><input type="text" name="applyComissao3" id="applyComissao3" placeholder="Ex: TOTAL DE VENDAS"></td>
+                <td><input type="number" name="valorComissao3" id="valorComissao3"></td>
+                <td><input type="number" name="valorSalarioBASE3" id="valorSalarioBase3"></td>
+              </tr>
+              <tr>
+                <td><input type="date" name="mesDiaPg4" id="mesDiaPg4"></td>
+                <td><input type="number" name="perCentComissao4" id="perCentComissao4"></td>
+                <td><input type="text" name="applyComissao1" id="applyComissao1" placeholder="Ex: TOTAL DE VENDAS"></td>
+                <td><input type="number" name="valorComissao1" id="valorComissao1"></td>
+                <td><input type="number" name="valorSalarioBASE1" id="valorSalarioBase1"></td>
+              </tr>
+              <tr>
+                <td><input type="date" name="mesDiaPg1" id="mesDiaPg1"></td>
+                <td><input type="number" name="perCentComissao1" id="" perCentComissao1"></td>
+                <td><input type="text" name="applyComissao1" id="applyComissao1" placeholder="Ex: TOTAL DE VENDAS"></td>
+                <td><input type="number" name="valorComissao1" id="valorComissao1"></td>
+                <td><input type="number" name="valorSalarioBASE1" id="valorSalarioBase1"></td>
+              </tr>
+              <tr>
+                <td><input type="date" name="mesDiaPg1" id="mesDiaPg1"></td>
+                <td><input type="number" name="perCentComissao1" id="" perCentComissao1"></td>
+                <td><input type="text" name="applyComissao1" id="applyComissao1" placeholder="Ex: TOTAL DE VENDAS"></td>
+                <td><input type="number" name="valorComissao1" id="valorComissao1"></td>
+                <td><input type="number" name="valorSalarioBASE1" id="valorSalarioBase1"></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>CHECK OPTIONS</legend>
+          <label for="opt1">
+            <input type="checkbox" name="opt1" value="check01"> CHECK #01
+          </label>
+          <label for="opt1">
+            <input type="checkbox" name="opt1" value="check02"> CHECK #02
+          </label>
+          <label for="opt1">
+            <input type="checkbox" name="opt1" value="check03"> CHECK #03
+          </label>
+        </fieldset>
+
+        <button type="submit" class="css-button-shadow-border-sliding--green">Enviar Datos</button>
+      </form>
+    </div>
+  </main>
+  <div class="display-0">
+    <div class="pre-footer">
+
+    </div>
+    <footer>
+      <p>Feito por @Botechia-Erika</p>
+    </footer>
+  </div>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/stylesheets.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+  <title>JS #01</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    :root {
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 16px;
+    }
+
+    body {
+      display: flex;
+      flex-flow: column wrap;
+      width: 100%;
+      min-width: 300px;
+      height: 100%;
+      min-height: 100vh;
+      background-color: #50E8D3;
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: #06021a;
+      font-weight: 900;
+      font-size: 1.1rem;
+      line-height: 2rem;
+    }
+
+    ul>li {
+      list-style: none;
+    }
+
+    nav>ul {
+      display: flex;
+      width: 100%;
+      align-self: space-around;
+      justify-content: space-around;
+      list-style-type: none;
+      background-color: #FFC100;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    nav>ul>li,
+    span>a.item {
+      display: inline-block;
+      background-color: #ff8b55;
+      width: 100px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 0.5px #ffffff;
+      text-shadow: none;
+      align-self: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      background-color: yellow;
+    }
+
+    .h1__div {
+      display: flex;
+      flex-flow: column wrap;
+      background-color: yellow;
+      text-align: center;
+      font-size: 3.5rem;
+      /* padding aire entrre caja y contenido*/
+      padding: 25px;
+      text-shadow: 3px 4px #fff3f3;
+      height: 100%;
+      min-height: 90vh;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5vh;
+    }
+
+    main {
+      margin-top: 50px;
+      width: 100%;
+      height: 100%;
+      background-color: bisque;
+    }
+
+    main h2 {
+      padding-top: 150px;
+      background-color: goldenrod;
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow: 3px 4px 0.5px #ffffff;
+      margin: 30px auto;
+      padding-bottom: 5vh;
+    }
+
+    section {
+      min-height: calc(100vh - 10vh);
+      align-content: center;
+      margin-top: 80px;
+    }
+
+    section h2 {
+      background-color: #fffb00;
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow: 3px 4px 0.5px #efefef;
+
+
+    }
+
+
+    section>ul {
+
+
+      display: flex;
+      flex-flow: row wrap;
+
+      width: 90%;
+      padding: 2rem;
+      height: 100%;
+      margin-left: 10%;
+      align-self: center;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    section>ul>li {
+      width: 300px;
+      height: 360px;
+      padding: 2rem;
+      margin: 30px auto;
+      justify-content: space-around;
+      align-items: space-around;
+      align-self: space-around;
+      background-color: #e9f7fb;
+      box-shadow: 3px 4px 0.5px #100c0c;
+      border: 8px groove gold;
+      border-radius: 15px 0 15px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: gray;
+    }
+
+
+    .fixed {
+      width: 100%;
+      text-align: center;
+      top: 0;
+      position: fixed;
+      height: 10vh;
+      background-color: yellow;
+    }
+
+    .fixed2 {
+      width: 100%;
+      text-align: center;
+      bottom: 0;
+      position: fixed;
+      height: 5vh;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="fixed">
+      <nav class="aside-container">
+        <ul>
+          <li>
+            <a href="/"> ColabDev</a>
+          </li>
+          <li>
+            <a class=" item" href="#top03">TOP #03</a>
+          </li>
+          <li>
+            <a class="item" href="#skills">Skills</a>
+          </li>
+          <li>
+            <a class="item" href="#aboutMe">About Me</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+    <div class="h1__div">
+      <h1 id="title">Colab DEV</h1>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 id="top03"> <span> <a class="item" href="#aboutMe">AboutMe</a>
+          </span>
+          TOP#03
+          <span> <a class=" item" href="#skills">Skills</a>
+          </span>
+        </h2>
+
+
+      </div>
+      <ul>
+
+        <li>
+
+          <h3> Academico #01 </h3>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="/assets/img/css01_inlineStyle.jpg" alt="" class="section__img">
+        </li>
+        <li>
+          <h3> Academico #02 </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="/assets/img/css01_inlineStyle.jpg" alt="" class="section__img">
+        </li>
+        <li>
+          <h3> Academico #03 </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="/assets/img/css01_inlineStyle.jpg" alt="" class="section__img">
+        </li>
+      </ul>
+      <h2 class="h2__banner">Melhores PROJETOS da SEMANA</h2>
+
+    </section>
+
+    <section>
+      <h2 id="skills"> <span> <a class=" item" href="#top03">Projects</a>
+        </span>
+        Skills
+        <span> <a class=" item" href="#">AboutMe</a>
+        </span>
+      </h2>
+      <ul>
+
+        <li>
+          <h3> Skills #01 </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="https://picsum.photos/id/1076/250/150" alt="">
+        </li>
+        <li>
+          <h3> Skills #02 </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="https://picsum.photos/id/1076/250/150" alt="">
+        </li>
+        <li>
+          <h3> Skills #03 </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="https://picsum.photos/id/1076/250/150" alt="">
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2 id="aboutMe"> <span> <a class=" item" href="#skills">Skills</a>
+        </span>
+        AboutMe
+        <span> <a class=" item" href="#top03">Projects</a>
+        </span>
+      </h2>
+      <ul>
+
+        <li>
+          <h3> Skills #01 </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="https://picsum.photos/id/1076/250/150" alt="">
+        </li>
+        <li>
+          <h3> Skills #02 </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="https://picsum.photos/id/1076/250/150" alt="">
+        </li>
+        <li>
+          <h3> Skills #03 </h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aut laborum quasi minus blanditiis nisi
+            sequi natus rem eos, iste repudiandae ex voluptatem excepturi maiores non facere cupiditate deleniti enim?
+          </p>
+
+          <img src="https://picsum.photos/id/1076/250/150" alt="">
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
+
+<footer class="fixed2">
+  <p>&copy MADE BY <a href="https://github.com/botechia-erika" target="_blank">Erika-Botechia</a></p>
+</footer>
+</body>

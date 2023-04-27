@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>COPA-BR</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<style>
+    /* Container */
+    
+    h1 {
+        font-size: 3rem
+    }
+    /*ARTICLE{*/
+    /*    WIDTH: 100PX;*/
+    /*    HEIGHT: 100PX;*/
+    /*    BACKGROUND: DARKCYAN;*/
+    /*    COLOR: #FFF;*/
+    /*    TEXT-ALIGN: CENTER;*/
+    /*    FONT-FAMILY: SANS-SERIF;*/
+    /*    LINE-HEIGHT: 80PX;*/
+    
+    .css-button-arrow--green {
+        display: inline-block;
+        color: yellow;
+        font-size: 20px;
+        margin: 30px auto;
+        max-width: 180px;
+        background-color: rgb(255, 0, 170);
+        padding: 1px;
+        text-align: center;
+        height: 60px;
+        font-weight: 900px;
+    }
+    
+    .css-button-arrow--green {
+        min-width: 330px;
+        height: 80px;
+        color: #fff;
+        padding: 5px 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        overflow: hidden;
+        border-radius: 5px;
+        border: none;
+        background-color: #078324;
+        color: rgb(255, 251, 0);
+        text-decoration: none;
+        box-shadow: 4pxx 4px 0.5 rgb(243, 255, 191);
+        ;
+    }
+    
+    .css-button-arrow--green:hover {
+        border-radius: 5px;
+        padding-right: 24px;
+        padding-left: 8px;
+    }
+    
+    .css-button-arrow--green:hover:after {
+        opacity: 1;
+        right: 10px;
+        color: yellow;
+    }
+    
+    .css-button-arrow--green:after {
+        content: "\00BB";
+        position: absolute;
+        opacity: 0;
+        font-size: 50px;
+        line-height: 40px;
+        top: 0;
+        right: -20px;
+        transition: 0.4s;
+        color: rgb(255, 0, 170)
+    }
+    
+    section {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        align-self: center;
+        margin-left: 2rem;
+    }
+    /*
+      propiedades PADRE
+      
+      propiedades HIJO
+      flex-grow
+      grows  disponible / grow items
+      grows disponible - tamano contenedor - tamano items
+      ejemplo div 1200px con 3 hijos de 200 px
+      grow-disponible = 1200 - 3*200 = 600
+      defino una cantidad de grows para cada item
+      
+      item 1: 1 * 50 -> 50
+      item 2 : 2 * 50 -> 100
+      item 3 : 1 * 50 -> 50
+      
+      total 4 flex grow con ocupacion
+      
+      disponible = spaceContenedor - spaceItems
+      grow = disponible /numGrows * spaceContenedor
+      grow = disponible / flex-->
+*/
+    
+    form label,
+    fieldset {
+        display: flex;
+        width: 60%;
+        margin-bottom: 10px;
+    }
+    
+    header,
+    main,
+    footer {
+        padding: 25px;
+    }
+    
+    header {
+        background-color: rgb(243, 255, 191);
+        height: 100%;
+    }
+    
+    form,
+    fieldset {
+        display: flex;
+        flex-flow: column wrap;
+        background-color: #ddd;
+        width: 100%;
+        padding-right: 90px;
+        align-self: center;
+    }
+    
+    input [type="checkbox"] {
+        max-height: 60px;
+    }
+    
+    fieldset,
+    fieldset input {
+        max-width: 70%
+    }
+</style>
+
+</head>
+
+<body>
+    <!-- header navbar -->
+    <main class="display-1">
+
+
+        <header id="id00A">
+
+            <h1>SONHO +ACAO +=REALIDADE</h1>
+
+
+            <a href="#idA" class="css-button-arrow--green"> PRECOS E PROMOS</a>
+            <a href="#idA" class="css-button-arrow--green">PREENCHER MATRICULA</a>
+            <a href="#idA" class="css-button-arrow--green">PARTICIPAR COPA-DEV</a>
+
+
+
+
+
+        </header>
+    </main>
+    <div class="display-1">
+
+        <td class="dir">Curso Selecionado</td>
+
+
+        <td class="dir">
+            <select name="valor1" id="valor1">
+        <option value="500">HTML e CSS - valor R$2000,00</option>
+        <option value="800">ESPECIALIZACAO DOM - valor R$800,00</option>
+        <option value="1500">ESPECIALIZACAO REACT - valor R$1500,00</option>
+        <option value="2400">API REST FUNCIONAL - valor R$ 2400</option>
+      </select>
+
+        </td>
+        </tr>
+        <tr>
+            <td class="dir">desconto %:</td>
+            <td><input type="text" name="desconto1" id="desconto1" onblur="calcValor()" /></td>
+        </tr>
+        <tr>
+            <td class="dir">desconto R$:</td>
+            <td><input type="text" name="desconto2" id="desconto2" onblur="calcValor()" /></td>
+        </tr>
+        <tr>
+            <td class="dir">valor total:</td>
+            <td><input type="text" name="total" id="total" value="0.00" /></td>
+            <tr>
+                </table>
+
+    </div>
+    </main>
+    <!-- ---UL y OL SOLO TIENEN HIJOS LI ADENTRO PUEDE HABER OTRAS ETIQUETAS!!!!!!---------- -->
+
+    <!--  <ul class="container__list-M2">
+        <li class="li__container-M2">
+          <article class="article__container-m02">
+            <div class="article-text">
+
+
+              <h2>Nombre del PET</h2>
+
+              <ul>
+                <li>
+                  <div class="details">
+                    <h3>Raza</h3>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <figure>
+              <img class="img-article" src="../assets/img/avatar/default.svg" alt="sonic videojuego">
+            </figure>
+          </article>
+        </li>
+        <li class="li__container-M2">
+          <article class="article__container-m02">
+            <div class="article-text">
+
+
+              <h2>Nombre del PET</h2>
+
+              <ul>
+                <li>
+                  <div class="details">
+                    <h3>Raza</h3>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <figure>
+              <img class="img-article" src="../assets/img/avatar/default.svg" alt="sonic videojuego">
+            </figure>
+          </article>
+        </li>
+        <li class="li__container-M2">
+          <article class="article__container-m02">
+            <div class="article-text">
+
+
+              <h2>Nombre del PET</h2>
+
+              <ul>
+                <li>
+                  <div class="details">
+                    <h3>Raza</h3>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <figure>
+              <img class="img-article" src="../assets/img/avatar/default.svg" alt="sonic videojuego">
+            </figure>
+          </article>
+        </li>
+        <li class="li__container-M2">
+          <article class="article__container-m02">
+            <div class="article-text">
+
+
+              <h2>Nombre del PET</h2>
+
+              <ul>
+                <li>
+                  <div class="details">
+                    <h3>Raza</h3>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <figure>
+              <img class="img-article" src="../assets/img/avatar/default.svg" alt="sonic videojuego">
+            </figure>
+          </article>
+        </li>
+        <li class="li__container-M2">
+          <article class="article__container-m02">
+            <div class="article-text">
+
+
+              <h2>Nombre del PET</h2>
+
+              <ul>
+                <li>
+                  <div class="details">
+                    <h3>Raza</h3>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <figure>
+              <img class="img-article" src="../assets/img/avatar/default.svg" alt="sonic videojuego">
+            </figure>
+          </article>
+        </li>
+        <li class="li__container-M2">
+          <article class="article__container-m02">
+            <div class="article-text">
+
+
+              <h2>Nombre del PET</h2>
+
+              <ul>
+                <li>
+                  <div class="details">
+                    <h3>Raza</h3>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <figure>
+              <img class="img-article" src="../assets/img/avatar/default.svg" alt="sonic videojuego">
+            </figure>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>-->
+
+    <footer id="id00B">
+
+
+
+    </footer>
+
+
+    <script src="../assets/js/template-1.js"></script>
+    <script src="../assets/js/template-2.js"></script>
+</body>
+
+</html>

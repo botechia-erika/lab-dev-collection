@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="../css/style.css" rel="stylesheet" />
+    <title>COPA DEV CODE</title>
+</head>
+
+<body>
+    <!-- header navbar -->
+    <header id="id00A">
+
+    </header>
+
+    <main>
+        <section class="display-1" id="s-01">
+            <div class="content-section" id="idC2">
+
+                <div id="myApp">
+                    <form action="" method="GET">
+                        <label for="jogadorNome">Nombre Jogador: </label>
+                        <input type="text" for="realUser" id="Nome Jogador" placeholder="Pepe Suarez">
+                        <!-- FOR = ES PARA -- label es para este input -->
+
+                        <label for="jogador">Selecao </label>
+                        <input type="text" name="jogador" id="jogador">
+
+                        <!-- NUMBER -->
+
+                        <label for="jogadorNumero"> Ingrese su EDAD</label>
+                        <input type="number" name="jogadorNumero" id="jogadorNumero" min="18" max="120" maxlength="3" value="18">
+
+
+                        <!-- EMAIL
+                <p>
+                    <label for="emailUser">E-mail</label>
+                    <input type="email" name="emailUser" id="emailUser" minlength="9" maxlength="250"
+                        pattern=".+@.+\.com">
+
+
+                </p>-->
+                        <!-- fecha -->
+
+                        <label class="dateBirth">Fecha Cumple </label>
+                        <input type="date" name="dateBirth" id="dateBirth">
+
+
+                        <!-- PASSWORD -->
+                        <p>
+                            <label for="passwordUser">Contrasena</label>
+                            <input type="password" name="passwordUser" pattern="[(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$]" id="passwordUser" minlength="5" maxlength="8" size="8" required="">
+                        </p>
+                        <!-- size = tamano visual minlenght=numero minimo de caracteres maxlenght = numero maximo caracteres -->
+                        <!-- pattern usa expresiones regulares tipo de conjunto de caracteres que acepta -->
+
+                        <!-- file -->
+                        <!-- <label>Archivo
+    <input type="file" name="fileUser" id="fileUser">
+    </label> -->
+                        <label>COLOR PICKER
+                            <input type="color" name="colorForUser" id="colorForUser">
+
+                        </label>
+
+                        <fieldset>
+                            <legend>Primeira Copa</legend>
+                            <label for="primeiraCopa">
+
+                                <input type="radio" name="primeiraCopa" value="true"> SIM
+                            </label>
+                            <label for="radio">
+                                <input type="checkbox" name="primeiraCopa" value="false">NAO
+                            </label>
+                            <label for="edicoesCopa" id="edicoesCopa" class="copaFirst">
+                                <input type="text" name="edicoesCopa" value="" placeholder="Indique ANO edicoes">
+
+                            </label>
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>CHECK OPTIONS</legend>
+                            <label for="jogadorPosicao">
+                                <input type="checkbox" name="jogadorPosicao" value="Lateral"> CHECK #01
+                            </label>
+                            <label for="jogadorPosicao">
+                                <input type="checkbox" name="jogadorPosicao" value="Zagueiro"> CHECK #02
+                            </label>
+                            <label for="jogadorPosicao">
+                                <input type="checkbox" name="jogadorPosicao" value="check03"> CHECK #03
+                            </label>
+                        </fieldset>
+                        <button type="submit">Enviar datos</button>
+
+                    </form>
+                </div>
+
+                <aside class="aside1">
+                    <div class="temaPagina">
+                        <a href="temaPagina01.html">
+                            <img class="iconTemas" src="../IMG//logo01.png"" alt="imagen camisa">
+                            <div class="temaPagina-div">
+                                <p class="temaPagina-name">mascota</p>
+                                <p class="temaPagina-slogan">banner</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="temaPagina">
+                        <a href="temaPagina01.html">
+                            <img class="iconTemas" src="../IMG//logo01.png"" alt="imagen camisa">
+                            <div class="temaPagina-div">
+                                <p class="temaPagina-name">mascota</p>
+                                <p class="temaPagina-slogan">banner</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="temaPagina">
+                        <a href="temaPagina01.html">
+                    <img class="iconTemas" src="../IMG//logo01.png"" alt=" imagen camisa">
+                    <div class="temaPagina-div">
+                        <p class="temaPagina-name">mascota</p>
+                        <p class="temaPagina-slogan">banner</p>
+                    </div>
+                </a>
+                    </div>
+
+                    <div class="temaPagina">
+                        <a href="temaPagina01.html">
+                    <img class="iconTemas" src="../IMG//logo01.png"" alt=" imagen camisa">
+                    <div class="temaPagina-div">
+                        <p class="temaPagina-name">mascota</p>
+                        <p class="temaPagina-slogan">banner</p>
+                    </div>
+                </a>
+
+                    </div>
+
+                </aside>
+                </aside>
+    </main>
+    </section>
+    <footer id="id00B">
+
+
+    </footer>
+
+    <script src="../assets/js/template-1.js"></script>
+    <script src="../js/script04.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ */
+*{box-sizing:  border-box;
+margin: 0;
+padding: 0;
+}
+
+
+/* BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+main section{
+  min-height: 100vh;
+}
+
+ /*OBJECTS*/
+article{
+display: flex;
+flex-flow:column wrap;
+width: 33.5%;
+height: 100%;
+min-width: 375px;
+max-width: 400px;
+min-height: 450px;
+max-height: 550px;
+margin: 30px auto;
+  background-color: #fffaef;
+  box-shadow: rgb(104, 80, 37) -1.95px 1.95px 1.6px;
+  border-radius:25px;align-items:center;
+}
+main .row-area{
+  display: flex;  width: 100%; 
+  flex-flow: row wrap;
+  margin: auto;
+width: 90%;
+}
+main section article img{
+  display: block;
+  margin: 10px auto;
+  width:210px;
+  height: 210px;
+  border: 12px groove rgb(229, 255, 0);
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
+box-shadow: rgba(105, 43, 43, 0.973) 0px 1px 1px, rgb(92, 66, 76) 0px 0px 0px 3px;
+margin-top: 80px;
+    background: #ff0d72;
+ }
+
+ .avatar img{
+      width: 100%;
+      background: #f89603;
+ }
